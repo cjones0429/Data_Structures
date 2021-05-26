@@ -136,4 +136,6 @@ r = insert(r, 66)
 r = insert(r, 87)
 
 inorder(r)
+search(r, 45)
+
 
