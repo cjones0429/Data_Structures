@@ -1,6 +1,7 @@
 from linked_list import LinkedList
 from immediate_family import ImmediateFamily
-#from months import Months
+
+# from months import Months
 # import months
 # #1. a) Store the months of the year. Grab the month in which Pi Day exists and print it to the console.
 #
@@ -68,7 +69,7 @@ immediate_family_list = [ImmediateFamily("Seth", "Jones", "Father"),
 for i in immediate_family_list:
     print(i)
 
-#3 Watch Linked List demo video on portal. Take the already created
+# 3 Watch Linked List demo video on portal. Take the already created
 # linked list with an append_node method and add on the following functionality:
 # add_to_beginning
 # contains_node
@@ -81,3 +82,58 @@ if linked_list.contains_node(80):
     print("yes")
 else:
     print("no")
+
+
+# 4
+
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+
+
+def insert(root, key):
+    if root is None:
+        return Node(key)
+    else:
+        if root.val == key:
+            return root
+        elif root.val < key:
+            root.right = insert(root.right, key)
+        else:
+            root.left = insert(root.left, key)
+    return root
+
+
+def search(root, key):
+    if root is None or root.val == key:
+        return root
+
+    if root.val < key:
+        return search(root.right, key)
+
+    return search(root.left, key)
+
+
+# *****BONUS #1*****
+
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
+
+
+r = Node(55)
+r = insert(r, 34)
+r = insert(r, 29)
+r = insert(r, 41)
+r = insert(r, 45)
+r = insert(r, 73)
+r = insert(r, 66)
+r = insert(r, 87)
+
+inorder(r)
+
