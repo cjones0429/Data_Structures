@@ -1,38 +1,39 @@
 from linked_list import LinkedList
 from immediate_family import ImmediateFamily
-
+import months
+import random
 # from months import Months
 # import months
 # #1. a) Store the months of the year. Grab the month in which Pi Day exists and print it to the console.
-#
-#
-# def find_month_from_holiday(self, holiday_str=""):
-#     self.months_tuple = (months.january, months.february, months.march, months.april, months.may, months.june,
-#                          months.july, months.august, months.september, months.october,
-#                          months.november, months.december)
-#
-#     i = 0
-#     for selected_month in self.months_tuple:
-#         while len(selected_month.holiday) > 1:
-#             if selected_month.holiday[i] == holiday_str:
-#                 return selected_month
-#             else:
-#                 i += 1
-#
-#
-# pi_day_month = find_month_from_holiday(["Pi Day"])
-# print(pi_day_month)
+
+
+def find_month_from_holiday(self, holiday_str=""):
+    self.months_tuple = (months.january, months.february, months.march, months.april, months.may, months.june,
+                         months.july, months.august, months.september, months.october,
+                         months.november, months.december)
+
+    i = 0
+    for selected_month in self.months_tuple:
+        while len(selected_month.holiday) > 1:
+            if selected_month.holiday[i] == holiday_str:
+                return selected_month
+            else:
+                i += 1
+
+
+pi_day_month = find_month_from_holiday(["Pi Day"])
+print(pi_day_month)
 
 
 # 1. b) Store all of the locations where you have celebrated your birthday.
 #       Add three locations where you may celebrate your birthday in the future.
 #       Iterate over the collection and print each one to the console.
 
-# bday_locations = {"Indiana", "Florida", "Tennessee"}
-# bday_locations.update(["Mexico", "Colorado", "Canada"])
-#
-# for location in bday_locations:
-#     print(location)
+bday_locations = {"Indiana", "Florida", "Tennessee"}
+bday_locations.update(["Mexico", "Colorado", "Canada"])
+
+for location in bday_locations:
+    print(location)
 
 
 # 1. c)Store sweepstakes contestants, uniquely identify each contestant.
@@ -41,18 +42,18 @@ from immediate_family import ImmediateFamily
 # Create a method on the sweepstakes class to randomly pick a winner
 # Print the winner’s first name and last name to the console
 # import random
-#
-# contestants = []
-#
-# contestant_one = contestants.append("Johnny Appleseed")
-# contestant_two = contestants.append("Terry Lewis")
-# contestant_three = contestants.append("Corey Davis")
-# contestant_four = contestants.append("Kyle Horton")
-# contestant_five = contestants.append("Dave Hines")
-#
-# contestant_index = random.randint(0, 4)
-# print("Congratulations! You Win " + contestants[contestant_index]+"!")
-#
+
+contestants = []
+
+contestant_one = contestants.append("Johnny Appleseed")
+contestant_two = contestants.append("Terry Lewis")
+contestant_three = contestants.append("Corey Davis")
+contestant_four = contestants.append("Kyle Horton")
+contestant_five = contestants.append("Dave Hines")
+
+contestant_index = random.randint(0, 4)
+print("Congratulations! You Win " + contestants[contestant_index]+"!")
+
 
 # 2. Use a list to store the dictionary of your immediate family members,
 # with each index of the list storing its own dictionary.
@@ -136,6 +137,3 @@ r = insert(r, 66)
 r = insert(r, 87)
 
 inorder(r)
-search(r, 45)
-
-
